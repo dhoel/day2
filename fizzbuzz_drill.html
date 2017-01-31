@@ -1,21 +1,39 @@
 
 <script>
   function fizzBuzz(countTo) {
+    var results = [];
+
     for (var i = 1; i < countTo; i++) {
-      switch(true) {
-        case i % 15 === 0:
-          console.log("fizzbuzz");
+
+      switch(fizzbuzzEvaluation(i)) {
+        case "fizzbuzz":
+          results.push("fizzbuzz");
           break;
-        case i % 5 === 0:
-          console.log("buzz");
+        case "buzz":
+          results.push("buzz");
           break;
-        case i % 3 === 0:
-          console.log("fizz");
+        case "fizz":
+          results.push("fizz");
           break;
         default:
-          console.log(i);
+          results.push(i);
           break;
       }
+    }
+
+    console.log(results);
+    return results;
+  }
+
+  function fizzbuzzEvaluation(num) {
+    if (num % 15 === 0) {
+      return "fizzbuzz";
+    } else if (num % 5 === 0) {
+      return "buzz";
+    } else if (num % 3 === 0) {
+      return "fizz";
+    } else {
+      return num;
     }
   }
 
