@@ -20,9 +20,14 @@ Explain JavaScript's strict mode
   What are side effects, and what is a pure function?
 
   A side effect is when a function alters code outside of the function call. So if we had a function that called an array, and we pushed an item onto the array, we would have mutated the array, and therefore created a side effect. Not all side effects
-  are bad. 
+  are bad.
 
   A pure function is a function that returns a value that is only determined by its input values, without any observable side
   effects.
 
 Explain variable hoisting in JavaScript.
+
+  Variable hoisting refers to how Javascript reads variable declarations when parsing the code before execution. Javascript interprets
+   a variable declaration and value assignment together (var varOne = 'foo';) as 2 statements, 1. the declaration and 2. the value
+   assignment. The Javascript interpreter will set aside memory for the variable and leave it as undefined, or basically the interpreter
+   is moving, or hoisting, all the variable declarations in a given function to the top of that function prior to executing the code.
