@@ -6,7 +6,8 @@
 
   function turtleMovement(steps) {
     return steps.filter(function(element) {
-      return !(element[0] < 0 || element[1] < 0)
+      // return !(element[0] < 0 || element[1] < 0)
+      return element[0] >= 0 && element[1] >= 0;
     }).map(function(element) {
       return element[0] + element[1];
     }).forEach(function(item) {
