@@ -1,0 +1,52 @@
+<<html>
+<head>
+  <title>Loop and Array Drills</title>
+</head>
+<body>
+
+</body>
+  <script>
+
+    // find largest number in a list
+    function max(numbers) {
+      if (numbers.length === 0) {
+        return undefined;
+      }
+      var largestNumber = numbers[0];
+      var count = 1;
+
+      while (count < numbers.length) {
+        if (largestNumber < numbers[count]) {
+          largestNumber = numbers[count];
+        }
+        count += 1;
+      }
+
+      console.log(largestNumber);
+      return largestNumber;
+    }
+
+    max([1, 3, 5, 7, 36, 2]);
+
+    function min(numbers) {
+      if (numbers.length === 0) {
+        return undefined;
+      }
+      var smallestNumber = numbers[0];
+      var count = 1;
+
+      while (count < numbers.length) {
+        if (smallestNumber > numbers[count]) {
+          smallestNumber = numbers[count];
+        }
+        count += 1;
+      }
+
+      console.log(smallestNumber);
+      return smallestNumber;
+    }
+
+    min([1, 3, 5, 7, 36, 2]);
+
+  </script>
+</html>
