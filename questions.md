@@ -14,6 +14,8 @@ Why are global variables avoided?
 
 Explain JavaScript's strict mode
 
-What are side effects, and what is a pure function?
+  Using strict Mode ('use strict';) will cause an error to be triggered if a variable is created without specifically declaring
+  it using the keyword "var" (e.g. [varOne = 'foo';] instead of [var varOne = 'foo';])
+  What are side effects, and what is a pure function?
 
 Explain variable hoisting in JavaScript.
